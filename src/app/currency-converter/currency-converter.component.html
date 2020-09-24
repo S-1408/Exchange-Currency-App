@@ -1,0 +1,29 @@
+
+<app-header></app-header>
+<div class="text-center" *ngIf="conversion_rates">
+
+<p [ngStyle]="{'color':'skyblue'}">{{title}}</p>
+
+<button (click)="increment()" [style.color]="clickCounter>0 ?'pink':'green'">ClickCount:&nbsp;{{clickCounter}}</button>
+<br>
+<br>
+<h1 [ngStyle]="{'color':'green'}">Currency Converter</h1>
+<br><br>
+<h2> IND to USD </h2>
+<input type="number" placeholder="amount" [(ngModel)]="amount" [ngStyle]="{'background-color':'lightgray'}">
+&nbsp;
+<label>From</label>&nbsp; <span>{{from}}</span>&nbsp;
+<select [(ngModel)]="from">
+  <option *ngFor="let rate of getAllCurrencies()" [value]="rate">{{rate}}</option>
+</select>
+<label>To</label>&nbsp; <span>{{to}}</span>
+<select [(ngModel)]="to">
+  <option *ngFor="let rate of getAllCurrencies()" [value]="rate">{{rate}}</option>
+</select>
+<br><br>
+<b [style.color]="amount>0 ?'blue':'red'">{{amount.toFixed(2)}} {{from}} = {{convert().toFixed(2)}} {{to}}</b>
+
+
+
+</div>
+<!--https://v6.exchangerate-api.com/v6/7ac07a4e2af4b65dc6d000dc/latest/USD  -->
