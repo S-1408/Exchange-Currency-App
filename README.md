@@ -1,4 +1,6 @@
 # AngularCurrencyApp
+![Screenshot (2)](https://user-images.githubusercontent.com/60258353/94183132-c8ef7400-fe56-11ea-8573-c4b968c802db.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
